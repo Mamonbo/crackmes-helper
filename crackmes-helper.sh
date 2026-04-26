@@ -5,7 +5,8 @@ echo $problem_id
 
 #get page's title
 wget $1
-page_title=$(cat $problem_id | python3 take_title.py)
+page_title=$(grep '<title>' $problem_id|sed 's/ *<title>//'|sed 's_</title>__'
+)
 mkdir "$page_title"
 cd "$page_title"
 

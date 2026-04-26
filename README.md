@@ -8,5 +8,4 @@
 ## dependancies
 - wget
 - 7z
-- python
 - linux
