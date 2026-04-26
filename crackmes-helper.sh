@@ -9,6 +9,7 @@ page_title=$(grep '<title>' $problem_id|sed 's/ *<title>//'|sed 's_</title>__'
 )
 mkdir "$page_title"
 cd "$page_title"
+mv ../$problem_id ./
 
 target_url=$(echo "$url_prefix$problem_id.zip")
 wget $target_url 
